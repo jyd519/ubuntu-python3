@@ -8,10 +8,10 @@ RUN echo $TZ | tee /etc/timezone \
      && apt-get install -y software-properties-common \
      && add-apt-repository -y ppa:deadsnakes/ppa \
      && apt-get update -y \
-     && DEBIAN_FRONTEND=noninteractive apt-get install -y python3.9 python3.9-dev python3-pip python3.9-distutils default-libmysqlclient-dev build-essential \
+     && DEBIAN_FRONTEND=noninteractive apt-get install -y python3.8 python3.8-dev python3-pip python3.8-distutils default-libmysqlclient-dev build-essential \
      && DEBIAN_FRONTEND=noninteractive apt-get install -y p7zip-full tzdata \
      && cd /usr/local/bin \
-     && ln -s /usr/bin/python3.9 python \
+     && ln -s /usr/bin/python3.8 python \
      && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives
 
-CMD ["python3.9"]
+CMD ["python3.8"]

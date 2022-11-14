@@ -1,7 +1,7 @@
-tag:=3.9
+tag:=3.8
 
 build:
-			docker build -t 'python3:3.9'  .
+			docker build -t 'python3:3.8'  .
 
 publish:
 			docker tag python3:$(tag) jyd119/python3:$(tag)
